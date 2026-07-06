@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Fruit Slicer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game"></canvas>
+
+  <div id="knife">
+    <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="8,20 65,6 98,20 65,34" fill="#dfe6f2" stroke="#9aa8c4" stroke-width="1.5"/>
+      <polygon points="8,20 65,6 65,34" fill="#f4f8ff"/>
+      <rect x="0" y="15" width="14" height="10" rx="3" fill="#5b4636"/>
+      <rect x="0" y="15" width="14" height="10" rx="3" fill="none" stroke="#3a2c22" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div id="hud">
+    <div>
+      <div id="score">0</div>
+      <div id="hudHigh">Best: 0</div>
+      <div id="combo"></div>
+    </div>
+    <div id="lives"></div>
+  </div>
+
+  <div id="startScreen" class="overlay">
+    <h1 class="title">FRUIT SLICER</h1>
+    <div class="blade-line"></div>
+    <p class="subtitle">Swipe across the fruit to slice it. Each fruit is worth 5 points, gold fruit is worth 10. Don't touch the bombs. Missing three fruits ends the run.</p>
+    <div class="high-score" id="startHigh">Best score: 0</div>
+    <button class="btn" id="startBtn">Start Slicing</button>
+    <div class="hint">mouse drag or finger swipe</div>
+  </div>
+
+  <div id="overScreen" class="overlay hidden">
+    <h1 class="title" style="font-size:min(11vw,58px)">RUN OVER</h1>
+    <div class="final-score" id="finalScore">Score: 0</div>
+    <div class="high-score" id="overHigh">Best score: 0</div>
+    <div class="blade-line"></div>
+    <button class="btn" id="retryBtn">Slice Again</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
